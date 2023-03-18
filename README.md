@@ -9,10 +9,18 @@
 
 ```lua
 
-ESX.ShowNotification = function(msg)
-	SetNotificationTextEntry('STRING')
-	AddTextComponentString(msg)
-	DrawNotification(0,1)
-end
+RegisterNetEvent('esx:showNotification')
+AddEventHandler('esx:showNotification', function(msg)
+	ESX.ShowNotification(msg)
+end)
 
->>>
+
+```
+<h1> Wejdz w es_extended > client > functions , wyszukaj tego powyzej i zmien na to nizej  </h1>
+
+```lua
+
+RegisterNetEvent('x_notify:send')
+AddEventHandler('x_notify:send', function(msg)
+    ESX.ShowNotification(msg)
+end)
